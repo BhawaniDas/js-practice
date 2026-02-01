@@ -1,18 +1,18 @@
 //let score = 33      //output - number
 //let score = "33"    //output - string
-// let score = "33abc"    //output - number
+// let score = "33abc"    //output - NaN
 // let score = null          //output - 0
-// let score = undefined    
+// let score = undefined     //ourput - NaN
 // let score = true          //output - 1
 // let score = false         //output - 0
 let score = "Bhawani"        //output - NaN
 
-// console.log(typeof score);
-// console.log(typeof(score));
+console.log(typeof score);
+console.log(typeof(score));
 
 let valueInNumber = Number(score)
-// console.log(typeof valueInNumber);
-// console.log(valueInNumber);        //output -NaN (Not a Number)
+console.log(typeof valueInNumber);
+console.log(valueInNumber);        //output -NaN (Not a Number)
 
 
 // "33" => 33
