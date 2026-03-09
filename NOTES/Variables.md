@@ -6,128 +6,158 @@ A variable is a container used to store data values.
 
 Example:
 
+```javascript
 let name = "Bhawani"
+```
 
 Here:
 
-* name → variable
-* "Bhawani" → stored value
+* `name` → variable
+* `"Bhawani"` → stored value
 
-----------------------------------------------------------------------------------------------------------------------------------
+---
 
-# 2. Ways to Declare Variables in JavaScript --->
+# 2. Ways to Declare Variables in JavaScript
 
 JavaScript provides three keywords:
 
-1. var
-2. let
-3. const
+1. `var`
+2. `let`
+3. `const`
 
 Example:
 
+```javascript
 var a = 10
 let b = 20
 const c = 30
+```
 
-----------------------------------------------------------------------------------------------------------------------------------
+---
 
-# 3. var (Old Method) --->
+# 3. var (Old Method)
 
 Example:
 
+```javascript
 var accountPassword = "12345"
+```
 
+### Characteristics
 
-### Characteristics --->
-
-* Can be redeclared
-* Can be updated
-* Has function scope
-* Causes unexpected bugs
+* Can be **redeclared**
+* Can be **updated**
+* Has **function scope**
+* Causes **unexpected bugs**
 
 Example:
 
+```javascript
 var x = 10
 var x = 20
 
 console.log(x)
+```
 
-Output: ---> 20
+Output:
 
-⚠ Because of these problems, developers usually avoid var.
+```
+20
+```
 
-----------------------------------------------------------------------------------------------------------------------------------
+⚠ Because of these problems, developers usually avoid `var`.
 
-# 4. let (Modern JavaScript) --->
+---
+
+# 4. let (Modern JavaScript)
 
 Example:
 
+```javascript
 let accountEmail = "bhawani@gmail.com"
+```
 
+### Characteristics
 
-### Characteristics --->
-
-* Cannot be redeclared in the same scope
-* Can be updated
-* Has block scope
+* Cannot be **redeclared in the same scope**
+* Can be **updated**
+* Has **block scope**
 
 Example (allowed):
 
+```javascript
 let email = "abc@gmail.com"
 email = "xyz@gmail.com"
-
+```
 
 Example (not allowed):
 
+```javascript
 let email = "abc@gmail.com"
 let email = "xyz@gmail.com"
+```
 
-Error: --->Identifier has already been declared
+Error:
 
-----------------------------------------------------------------------------------------------------------------------------------
+```
+Identifier has already been declared
+```
 
-# 5. const (Constant Variable) ---> 
+---
+
+# 5. const (Constant Variable)
 
 Example:
 
+```javascript
 const accountId = 144553
+```
 
+### Characteristics
 
-### Characteristics --->
-
-* Cannot be redeclared
-* Cannot be updated
-* Must be initialized during declaration
-* Has block scope
+* Cannot be **redeclared**
+* Cannot be **updated**
+* Must be **initialized during declaration**
+* Has **block scope**
 
 Example:
 
+```javascript
 const pi = 3.14
 pi = 3.14159
+```
 
-Error: ---> Assignment to constant variable
+Error:
 
-----------------------------------------------------------------------------------------------------------------------------------
+```
+Assignment to constant variable
+```
 
-# 6. Updating vs Redeclaring --->
+---
+
+# 6. Updating vs Redeclaring
 
 ### Updating (Allowed with let and var)
 
+```javascript
 let city = "Bhubaneswar"
 city = "Bengaluru"
+```
 
 ### Redeclaring (Not Allowed with let)
 
+```javascript
 let city = "Bhubaneswar"
 let city = "Delhi"
+```
 
 Error occurs.
 
-----------------------------------------------------------------------------------------------------------------------------------
+---
 
-# 7. Scope in JavaScript --->
+# 7. Scope in JavaScript
 
-Scope means the area where a variable is accessible.
+Scope means the **area where a variable is accessible**.
 
 ## Block Scope
 
@@ -141,14 +171,19 @@ Example:
 }
 
 console.log(a)
+```
 
+Output:
 
-Output: ---> ReferenceError
+```
+ReferenceError
+```
 
-----------------------------------------------------------------------------------------------------------------------------------
+---
 
-## Different Scope Example --->
+## Different Scope Example
 
+```javascript
 let email = "first@gmail.com"
 
 {
@@ -157,46 +192,59 @@ let email = "first@gmail.com"
 }
 
 console.log(email)
+```
 
+Output:
 
-Output: ---> second@gmail.com
-             first@gmail.com
+```
+second@gmail.com
+first@gmail.com
+```
 
 Both variables are different because they are in different scopes.
 
-----------------------------------------------------------------------------------------------------------------------------------
+---
 
-# 8. Undefined Variable --->
+# 8. Undefined Variable
 
 If a variable is declared but not assigned a value, it becomes `undefined`.
 
 Example:
 
+```javascript
 let accountState
 console.log(accountState)
+```
 
+Output:
 
-Output: ---> undefined
+```
+undefined
+```
 
-----------------------------------------------------------------------------------------------------------------------------------
+---
 
-# 9. Creating Variables Without let/var/const (Bad Practice) --->
+# 9. Creating Variables Without let/var/const (Bad Practice)
 
 Example:
 
+```javascript
 accountCity = "Bhubaneswar"
+```
 
-This creates a global variable automatically.
+This creates a **global variable** automatically.
 
-⚠ This is considered bad practice.
+⚠ This is considered **bad practice**.
 
 Correct way:
 
+```javascript
 let accountCity = "Bhubaneswar"
+```
 
-----------------------------------------------------------------------------------------------------------------------------------
+---
 
-# 10. Console Methods for Debugging --->
+# 10. Console Methods for Debugging
 
 ### console.log()
 
@@ -204,53 +252,63 @@ Prints output in console.
 
 Example:
 
+```javascript
 console.log(accountId)
+```
 
-----------------------------
+---
+
 ### console.table()
 
 Displays data in table format.
 
 Example:
 
+```javascript
 console.table([accountId, accountEmail, accountPassword])
-
+```
 
 Output appears in table format inside the console.
 
-----------------------------------------------------------------------------------------------------------------------------------
+---
 
-# 11. Comments in JavaScript --->
+# 11. Comments in JavaScript
 
 ### Single-line comment
 
+```javascript
 // This is a comment
+```
 
 ### Multi-line comment
 
+```javascript
 /*
 This is
 a multi-line comment
 */
+```
 
-----------------------------------------------------------------------------------------------------------------------------------
+---
 
 # 12. Best Practices
 
-✔ Prefer const by default
-✔ Use let when value needs to change
-❌ Avoid var
+✔ Prefer `const` by default
+✔ Use `let` when value needs to change
+❌ Avoid `var`
 ✔ Always declare variables properly
 ✔ Use meaningful variable names
 
 Example:
 
+```javascript
 const userId = 123
 let userEmail = "user@gmail.com"
+```
 
-----------------------------------------------------------------------------------------------------------------------------------
+---
 
-# 13. Quick Comparison Table --->
+# 13. Quick Comparison Table
 
 | Feature         | var      | let    | const          |
 | --------------- | -------- | ------ | -------------- |
@@ -259,19 +317,21 @@ let userEmail = "user@gmail.com"
 | Scope           | Function | Block  | Block          |
 | Modern JS Usage | Rare     | Common | Most Preferred |
 
-----------------------------------------------------------------------------------------------------------------------------------
+---
 
-# 14. Simple Rule --->
+# 14. Simple Rule
 
 Use this rule in real projects:
 
-* const → default choice
-* let → when value changes
-* var → avoid
+* `const` → default choice
+* `let` → when value changes
+* `var` → avoid
 
 Example:
 
+```javascript
 const accountId = 144553
 let accountEmail = "bhawani@gmail.com"
 let accountPassword = "12345"
 let accountCity = "Bhubaneswar"
+```
