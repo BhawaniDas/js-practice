@@ -1,4 +1,4 @@
-=# JavaScript Memory (Stack vs Heap)
+JavaScript Memory (Stack vs Heap)
 
 ---
 
