@@ -49,8 +49,8 @@ console.log(negValue);
 // console.log(2-2);
 // console.log(2*2);
 // console.log(2**3);
-// console.log(2/3);
-// console.log(2%3);
+// console.log(2/3);     --> its prints omly the quotient
+// console.log(2%3);     --> its prints only the remainder
 
 let str1 = "Hello"
 let str2 = " Bhawani"
@@ -58,14 +58,16 @@ let str3 = str1 + str2
 
 console.log(str3);
 
-console.log("1" + 2);         //--> 12
-console.log(1 + "2");         //--> 12
-console.log("1" + "2");       //--> 12
-console.log("1" + 2 + 2);     //--> 122
-console.log(1 + 2 + "2");     //--> 32
+console.log("1" + 2);         //--> 12   coz js automatically converts types when using +
+console.log(1 + "2");         //--> 12   same here also
+console.log("1" + "2");       //--> 12   here both r string, so the output prints string
+console.log("1" + 2 + 2);     //--> 122  here same process [("1" + 2) -> 12 then ("12" + 2) -> 122]
+console.log(1 + 2 + "2");     //--> 32   here 1st both the no. r simple no. so it added and the output -> 3 then (3 + "2") -> "32"
+                                    //   here js applied left to right 
 
 
-console.log(true);        //--> true
-console.log(+true);       //--> 1
+console.log(true);        //--> true 
+console.log(+true);       //--> 1      coz + -> number, so +true = Number(true) 
+                                 // TRUE --> 1   and   FALSE --> 0
 
 //console.log(true+);      //--> Error 
