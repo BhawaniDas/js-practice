@@ -2,19 +2,22 @@
 
 // 7 types: String, Number, Boolean, Null, Undefined, BigInt
 
-const score = 100
-const scoreValue = 100.3
+const score = 100           // --> number
+const scoreValue = 100.3    // --> number
+ 
+const isLoggedIn = false    // --> boolean
+const outsideTemp = null    // --> object
+let userEmail;              // --> undefined
 
-const isLoggedIn = false
-const outsideTemp = null
-let userEmail;
-
-const id = Symbol('123')
+const id = Symbol('123')             // --> Symbols are unique for there uniqueness
 const anotherId = Symbol('123')
 
-console.log(id === anotherId); 
+console.log(id === anotherId);   // --> false coz both have same no. but each Symbol is unique
 
-const bigNumber = 5418465125454618n
+
+const bigNumber = 5418465125454618n 
+
+console.log(typeof bigNumber);      // --> bigint
 
 
 // Reference (Non-Primitive) -->
@@ -22,19 +25,22 @@ const bigNumber = 5418465125454618n
 // Array, Objects, Functions
 
 
-const heros = ["shaktiman", "naagraj", "doga"]
+const heros = ["shaktiman", "naagraj", "doga"] 
+
 
 let myObj = {
     name: "Bhawani",
     age: 21,
 }
 
+
 const myFunction = function() {
     console.log("Hello World");
     
 }
 
-console.log(typeof bigNumber);      // --> undefined
+
+console.log(typeof heros);          // --> object
 console.log(typeof outsideTemp);    // --> object
 console.log(typeof scoreValue);     // --> number
 console.log(typeof anotherId);      // --> symbol
